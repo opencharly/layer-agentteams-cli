@@ -1,7 +1,5 @@
-version: 2026.232.0520
 agentteams-cli:
     candy:
-        version: 2026.224.0600
         description: |-
             The shared AgentTeams CLI tooling — the agt REST client built from the
             pinned AgentTeams v1.2.2 source and the mc MinIO client extracted from
