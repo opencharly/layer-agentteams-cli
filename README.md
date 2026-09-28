@@ -48,7 +48,7 @@ mc --version
 
 - `charly.yml` — the `agentteams-cli:` candy entity: the `layer-golang` require,
   the `mc` extraction, and the `plan:` (download + build + `check:` steps).
-- `.github/workflows/deploy.yml` — the manifest gate (`charly box validate`).
+- `.github/workflows/` — the org-wide `charly/pr-validator` gate; no per-repo candy gate.
 - `.github/workflows/tag-on-merge.yml` — CalVer tag + `CHANGELOG/` on merge.
 - `README.md` — this user overview.
 

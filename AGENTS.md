@@ -14,7 +14,7 @@ change adds a `skill:` entity, project it as `/charly-agentteams:<name>` here.
 Canonical files:
 
 - `charly.yml` — the `agentteams-cli:` candy entity (require, extract, plan).
-- `.github/workflows/deploy.yml` — the manifest gate.
+- `.github/workflows/` — the org-wide `charly/pr-validator` gate; there is no per-repo candy gate.
 - `.github/workflows/tag-on-merge.yml` — CalVer tag + `CHANGELOG/` on merge.
 - `README.md` — user overview only; never agent guidance.
 
@@ -33,11 +33,9 @@ Canonical files:
 ## Build / validate / test
 
 - `charly box validate` at the repo root — the same structural gate CI runs.
-  The CI pin lives in `.github/workflows/deploy.yml`; keep the `version:` schema
-  stamp within the pinned charly's supported range (do not migrate the stamp
-  past the pin).
-- `.github/workflows/deploy.yml` — builds the pinned charly from a CI-time
-  checkout and runs `charly box validate`. This is the merge gate.
+  Keep the `version:` schema stamp within the installed charly's supported range.
+- The merge gate is the org-wide `charly/pr-validator` (required check
+  `validate / validate`); there is no per-repo candy gate.
 - There is no live bed: the candy is a build, so the evidence is its `plan:`
   `check:` steps — `/usr/local/bin/agt` is a file and `/usr/local/bin/mc` is a
   file.
